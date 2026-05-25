@@ -293,6 +293,114 @@ const talks = [
     businessImpact: 82,
     technicalDepth: 45,
   },
+  {
+    id: 8,
+    title: "Building responsive AI agents with real-time communication",
+    speaker: "Sid Sharma",
+    company: "Agora",
+    date: "Jueves 07 de mayo",
+    stage: "Industry Stage",
+    category: "Agentes IA",
+    audience: "Developers / Líderes técnicos",
+    maturity: "Alta",
+    applicability: "Alta",
+    summary:
+      "La charla plantea que los agentes conversacionales dejan de ser solo experiencias de voice AI para convertirse en sistemas de comunicación en tiempo real, donde la latencia, el jitter, la pérdida de paquetes y la arquitectura de red determinan la calidad de la interacción.",
+    quickRead: [
+      "Los agentes de IA conversacional requieren infraestructura de comunicación en tiempo real, no solo un buen LLM.",
+      "La baja latencia es crítica para que la interacción se sienta natural y útil.",
+      "La arquitectura propuesta combina red en tiempo real, modelos STT/TTS, LLMs y una capa de orquestación.",
+      "Los casos de uso incluyen soporte, ventas, cobranza, reservas, dispositivos IoT y experiencias conversacionales embebidas."
+    ],
+    keyInsights: [
+      "El valor de un agente conversacional no depende únicamente del modelo, sino de toda la cadena: audio, red, transcripción, razonamiento, respuesta y síntesis de voz.",
+      "La red pública tradicional no siempre está optimizada para experiencias de voz y video en tiempo real.",
+      "La charla resalta la importancia de reducir latencia, jitter y pérdida de paquetes para evitar experiencias interrumpidas o poco naturales.",
+      "La capa de orquestación permite elegir modelos de speech-to-text, text-to-speech y LLM, o conectar modelos propios vía webhook.",
+      "La meta técnica mencionada es lograr experiencias end-to-end por debajo de 500 ms de latencia."
+    ],
+    whyItMatters:
+      "Los agentes de IA que interactúan por voz o video necesitan responder en tiempos humanos. Si la experiencia tiene latencia alta, cortes o reconexiones, el usuario percibe fricción y pierde confianza, incluso si el modelo subyacente es bueno.",
+    risks: [
+      "Latencia alta en conversaciones",
+      "Dependencia excesiva del modelo y poca atención a infraestructura",
+      "Experiencias de voz poco naturales",
+      "Problemas de escalabilidad en tráfico en tiempo real",
+      "Complejidad al integrar STT, TTS, LLM y canales de comunicación"
+    ],
+    tags: [
+      "Agentes IA",
+      "Real-time",
+      "Voice AI",
+      "Conversational AI",
+      "Latencia",
+      "Orquestación",
+      "STT",
+      "TTS",
+      "LLM"
+    ],
+    marketSignal: 90,
+    businessImpact: 84,
+    technicalDepth: 88
+  },
+  {
+    id: 9,
+    title: "Seguridad primero: lo que nadie te dice sobre escalar IA",
+    speaker: "Jaime Andrés Restrepo",
+    company: "DragonJAR",
+    date: "Viernes 08 de mayo",
+    stage: "Industry Stage",
+    category: "Seguridad",
+    audience: "Developers / Líderes técnicos / Directivos",
+    maturity: "Alta",
+    applicability: "Alta",
+    summary:
+      "La charla aborda los riesgos de llevar IA a la empresa sin controles adecuados: Shadow AI, pérdida de datos, adopción descontrolada, uso de herramientas externas, privacidad, modelos locales, gobierno, limitaciones reales de los modelos y desafíos para CISOs al escalar IA en producción.",
+    quickRead: [
+      "El principal riesgo no es solo usar IA, sino usarla sin visibilidad, gobierno ni controles.",
+      "Shadow AI expone datos sensibles cuando empleados usan herramientas externas sin supervisión.",
+      "Los CISOs deben entender qué datos salen, qué herramientas se usan y qué proveedores entrenan o procesan información.",
+      "La charla contrasta herramientas públicas, empresariales y modelos locales como alternativas con distintos niveles de control.",
+      "Escalar IA exige seguridad, privacidad, trazabilidad, gobierno y capacidades internas."
+    ],
+    keyInsights: [
+      "La pérdida de datos por GenAI ocurre cuando se comparten contratos, código, estrategias u otra información sensible en herramientas externas.",
+      "Shadow AI reduce la visibilidad del CISO sobre qué datos se exponen, dónde quedan y bajo qué condiciones son procesados.",
+      "No todas las herramientas tienen el mismo comportamiento frente a entrenamiento, telemetría, privacidad o controles empresariales.",
+      "Los modelos locales y plataformas como Ollama, AnythingLLM o soluciones internas pueden reducir exposición, pero requieren capacidades técnicas y gobierno.",
+      "La seguridad en IA debe contemplar prompts, datos, proveedores, permisos, trazabilidad, uso de herramientas, agentes y exposición de información.",
+      "La charla muestra que los modelos también tienen limitaciones: pueden mentir, alucinar, rechazar tareas legítimas o responder con exceso de confianza.",
+      "Escalar IA en producción implica diseñar controles antes de masificar su uso, no después de que los equipos ya hayan adoptado herramientas por su cuenta."
+    ],
+    whyItMatters:
+      "La adopción empresarial de IA puede avanzar más rápido que los controles de seguridad. Si no se gestiona, la organización pierde visibilidad sobre datos sensibles, proveedores, modelos, entrenamiento, accesos y riesgos operativos.",
+    risks: [
+      "Shadow AI",
+      "Pérdida de datos sensibles",
+      "Uso de herramientas externas sin gobierno",
+      "Entrenamiento o retención no deseada de información",
+      "Exceso de confianza en respuestas generadas por IA",
+      "Falta de trazabilidad",
+      "Jailbreaks o abuso de modelos",
+      "Dependencia de proveedores sin evaluación de privacidad",
+      "Falsa sensación de seguridad al usar modelos locales"
+    ],
+    tags: [
+      "Seguridad",
+      "CISO",
+      "Shadow AI",
+      "Data Loss",
+      "Gobernanza",
+      "Privacidad",
+      "Modelos locales",
+      "Ollama",
+      "AnythingLLM",
+      "Riesgo"
+    ],
+    marketSignal: 93,
+    businessImpact: 92,
+    technicalDepth: 86
+  }
 ];
 
 const categories = [
@@ -375,6 +483,19 @@ const extendedSummaries = {
     'La alfabetización en IA aparece como una habilidad transversal. No todos necesitan convertirse en expertos técnicos, pero sí entender cómo usar IA, cómo evaluar sus resultados, cómo integrarla al trabajo y cómo reconocer sus límites. El talento empieza a medirse menos por el título del rol y más por la capacidad de adaptarse y producir valor con nuevas herramientas.',
     'El punto más aplicable es que la adopción de IA no puede separarse de formación y gestión del cambio. Sin skills, las herramientas quedan subutilizadas. Sin procesos, las skills se dispersan. Sin liderazgo y seguimiento, la formación puede perder continuidad y no traducirse en cambios sostenidos.',
   ],
+  8: [
+    "La charla enfatiza que los agentes conversacionales no deben entenderse únicamente como una capa de voice AI sobre un LLM. Para que la experiencia funcione, la arquitectura completa importa: captura de audio, red, transcripción, razonamiento, generación de respuesta, síntesis de voz y entrega al usuario. Cualquier fricción en esa cadena puede afectar la percepción de inteligencia y utilidad del agente.",
+    "El punto técnico más relevante es la comunicación en tiempo real. La presentación diferencia una experiencia conversacional fluida de una interacción lenta o interrumpida, resaltando variables como latencia, jitter, pérdida de paquetes y rutas de red. La baja latencia no es un detalle secundario: es lo que permite que una conversación con IA se sienta natural.",
+    "La propuesta presentada combina una red optimizada para tiempo real con una capa de orquestación donde se pueden seleccionar o conectar modelos de speech-to-text, text-to-speech y LLM. Esto permite construir agentes para soporte, ventas, cobranza, reservas, experiencias con dispositivos IoT y otros escenarios donde la interacción debe ocurrir en tiempo humano.",
+    "El aprendizaje principal es que escalar agentes de IA conversacionales requiere pensar más allá del prompt y del modelo. La experiencia final depende tanto de la infraestructura como de la inteligencia del sistema."
+  ],
+  9: [
+    "La charla plantea una preocupación central para las empresas: la adopción de IA puede avanzar por fuera del control formal de seguridad. Cuando los equipos usan herramientas como ChatGPT u otras soluciones externas sin gobierno, aparece el Shadow AI: una zona sin visibilidad donde pueden circular contratos, código, estrategias, datos internos o información sensible.",
+    "Uno de los focos principales es la pérdida de datos por GenAI. El riesgo no está solo en que una herramienta responda mal, sino en que la organización no sepa qué información fue compartida, con qué proveedor, bajo qué política, si se usa para entrenamiento, si queda registrada o si puede ser reutilizada. Para un CISO, esa pérdida de visibilidad es crítica.",
+    "La charla también compara distintas aproximaciones para reducir exposición: herramientas empresariales con mejores controles, modelos locales, plataformas como Ollama o AnythingLLM, y arquitecturas internas donde la empresa controla mejor datos, prompts, modelos, usuarios y trazabilidad. Sin embargo, también deja claro que operar modelos locales no elimina automáticamente el riesgo: requiere capacidades, gobierno y monitoreo.",
+    "Otro mensaje importante es que los modelos tienen limitaciones prácticas. Pueden alucinar, responder con exceso de confianza, rechazar tareas legítimas, ser vulnerables a jailbreaks o comportarse de forma inconsistente. Por eso, escalar IA en producción exige controles técnicos, criterios de uso, evaluación de proveedores, políticas claras y mecanismos de auditoría.",
+    "El aprendizaje principal es que la seguridad debe diseñarse desde el inicio de la adopción de IA. Si los controles llegan después, la organización puede terminar persiguiendo usos no declarados, datos ya expuestos y decisiones tomadas sin trazabilidad suficiente."
+  ],
 };
 
 function getExtendedSummary(talk) {
@@ -403,11 +524,10 @@ function Pill({ children, active = false, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={`rounded-xl border px-3 py-2 text-xs transition ${
-        active
+      className={`rounded-xl border px-3 py-2 text-xs transition ${active
           ? 'border-cyan-300/70 bg-cyan-300/15 text-cyan-100 shadow-[0_0_20px_rgba(34,211,238,0.18)]'
           : 'border-white/10 bg-white/[0.035] text-slate-300 hover:border-cyan-300/40 hover:bg-cyan-300/10'
-      }`}
+        }`}
     >
       {children}
     </button>
@@ -440,11 +560,10 @@ function TalkCard({ talk, selected, onClick }) {
     <motion.button
       layout
       onClick={onClick}
-      className={`w-full rounded-3xl border p-4 text-left transition ${
-        selected
+      className={`w-full rounded-3xl border p-4 text-left transition ${selected
           ? 'border-cyan-300/60 bg-cyan-300/10 shadow-[0_0_35px_rgba(34,211,238,0.16)]'
           : 'border-white/10 bg-white/[0.045] hover:border-cyan-300/30 hover:bg-white/[0.07]'
-      }`}
+        }`}
     >
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
